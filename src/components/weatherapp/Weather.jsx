@@ -17,7 +17,7 @@ const Weather = () => {
         const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7c57e3eb260be27dcb3bd24467103fae`);
         
         setCast(response.data);
-        setSrc(Clear)
+        
   
     };
 
@@ -25,7 +25,7 @@ const Weather = () => {
   },[]);
 const [cast,setCast]=useState({})
 const [city,setCity]=useState('malaga')
-const [src,setSrc]=useState()
+const [src,setSrc]=useState(Clear)
 const getCity=(e)=>{
   setCity(e.target.value)
 }
